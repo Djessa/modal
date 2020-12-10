@@ -1,0 +1,36 @@
+body , html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.modal {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1s both;
+}
+.modal-wrapper {
+    overflow: auto;
+    width: 600px;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    background-color: #fff;
+    padding: 20px;
+    animation: slideFromTop 1s both;
+}
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slideFromTop {
+    from { transform: translatey(-50px);}
+    to {transform: translateY(0px);}
+}
